@@ -57,8 +57,9 @@
         }
 
         .options {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
             gap: 15px;
             margin-top: 30px;
         }
@@ -73,6 +74,7 @@
             cursor: pointer;
             transition: all 0.3s ease;
             font-weight: bold;
+            min-width: 140px;
         }
 
         button:hover {
@@ -152,12 +154,14 @@
             }
 
             .options {
-                grid-template-columns: 1fr; /* Uma coluna */
+                flex-direction: column; /* Botões empilhados em telas pequenas */
+                align-items: center;
             }
 
             button {
                 font-size: 14px;
                 padding: 12px;
+                min-width: 120px; /* Reduzindo o tamanho dos botões */
             }
 
             .comfort-word {
@@ -222,7 +226,7 @@
                 verse = '"O Senhor está perto dos que têm o coração quebrantado e salva os de espírito abatido." - Salmo 34:18';
             } else if (resposta === 'angustiada') {
                 heading = "Eu entendo sua angústia.";
-                comfortWord = "Sua luta não é em vão. Em Deus, você encontrará força para enfrentar cada desafio e superá-los com coragem.";
+                comfortWord = "Eu entendo que as vezes pode parecer que nem tudo da certo, porém parte do processo de nos restaurar, requer muita das vezes nos quebrar, as dificuldades nos tornam mais fortes e nos fazem pessoas melhores";
                 verse = '"Ele é quem dá força ao cansado e multiplica as forças ao que não tem nenhum vigor." - Isaías 40:29';
             } else if (resposta === 'grato') {
                 heading = "Que bonito ver sua gratidão!";
